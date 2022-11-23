@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({extends: false}));
 app.use(express.json());
 app.use(routes);
 
-app.get('/', (request, response) => {
+
+app.get('/dadosPessoais', (request, response) => {
 
 response.send("ok")
 }) 
