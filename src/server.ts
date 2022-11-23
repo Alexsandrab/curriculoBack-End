@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import routes from "./routes";
 
 const app = express();
-mongoose.connect('mongodb://localhost/ApiRestCurriculo');
+mongoose.connect('mongodb://localhost/curriculo');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extends: false}));
