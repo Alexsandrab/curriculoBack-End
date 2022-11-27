@@ -7,8 +7,8 @@ class DadosPessoaisController{
 
     async destruir(request: Request, response: Response){
         try{
-            const {id_dadosPessoais} = request.params;
-        const dadosDeletados = await dadosPessoais.findByIdAndDelete(id_dadosPessoais);
+            const {id} = request.params;
+        const dadosDeletados = await dadosPessoais.findByIdAndDelete(id);
 
         if(!dadosDeletados){
             return response.status(404).json({message: "Os dados não foram encontrados"});
@@ -21,8 +21,8 @@ class DadosPessoaisController{
 
     async update(request: Request, response: Response){
         try{
-        const { id_dadosPessoais } = request.params;
-        await dadosPessoais.findByIdAndUpdate(id_dadosPessoais, request.body);
+        const {id} = request.params;
+        await dadosPessoais.findByIdAndUpdate(id, request.body);
 
         response.status(200).json ({message: "Dados Atualizados"});
         }catch(error){
@@ -33,8 +33,8 @@ class DadosPessoaisController{
 
     async show(request: Request, response: Response){
         try{
-            const { id_dadosPessoais } = request.params;
-        const dadospessoais = await dadosPessoais.findById(id_dadosPessoais);
+            const { id } = request.params;
+        const dadospessoais = await dadosPessoais.findById(id);
 
         if(!dadosPessoais){
             return response.status(404).json({message: "Não existe dados"});

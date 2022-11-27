@@ -8,12 +8,14 @@
     "start": "nodemon src/server.ts "
   },
   "devDependencies": {
+    "reinstall-node-modules": "^2.0.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.4"
   },
   "dependencies": {
     "@types/express": "^4.17.14",
     "cors": "^2.8.5",
+    "debug": "^4.3.4",
     "express": "^4.18.2",
     "mongoose": "^6.7.2",
     "nodemon": "^2.0.20",
